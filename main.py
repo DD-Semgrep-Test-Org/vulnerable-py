@@ -30,7 +30,7 @@ def main():
 
 def insecure_tls_2(url):
     # Disable TLS verification
-    requests.post(url=url, verify=False)
+    requests.get(url=url, verify=False)
 
 
 if __name__ == "__main__":
