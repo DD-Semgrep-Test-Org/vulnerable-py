@@ -24,6 +24,14 @@ def main():
     if len(sys.argv) > 1:
         exec("\n".join(sys.argv[1:]))
 
+    # Introduce another request with TLS verification disabled
+    insecure_tls_2("https://google.com")
+
+
+def insecure_tls_2(url):
+    # Disable TLS verification
+    requests.post(url=url, verify=False)
+
 
 if __name__ == "__main__":
     main()
